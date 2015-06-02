@@ -13,7 +13,7 @@ class Matlock
 
   # Creates a new matlock object.
   def initialize()
-    @stopwords = []
+    @stopwords = Matlock::Data.common_words
   end
 
 
@@ -62,7 +62,7 @@ class Matlock
       
       # Only look at two words that are titlecase and neither one is a stopword.
       next if !first_name.titlecase? || !surname.titlecase?
-      next if !stopwords.index(first_name.upcase).nil? || !stopwords.index(surname.upcase).nil?
+      next if stopwords.key?(first_name.upcase) || stopwords.key?(surname.upcase)
       
       # Check if either the first name or last name is a recognized common name.
       if Matlock::Data.first_name?(first_name) || Matlock::Data.surname?(surname)

@@ -13,7 +13,7 @@ class TestMatlock < MiniTest::Unit::TestCase
     html = <<-BLOCK
       <html>
         <body>
-          <p>Once upon a time there was a linebacker named Jeremy Wilson who played with Jenny Smith who played with the Denver Broncos.</p>
+          <p>Once upon a time there was a linebacker named Jeremy Wilson who played with Jenny Smith who played with the Denver Broncos in The York.</p>
         </body>
       </html>
     BLOCK
