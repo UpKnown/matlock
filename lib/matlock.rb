@@ -67,7 +67,7 @@ class Matlock
       # Check if either the first name or last name is a recognized common name.
       if Matlock::Data.first_name?(first_name) || Matlock::Data.surname?(surname)
         full_name = "#{first_name} #{full_surname}"
-        names << full_name if names.index(full_name).nil?
+        names << full_name
       end
     end
     
