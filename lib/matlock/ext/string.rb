@@ -1,6 +1,6 @@
 class String
   def titlecase?
-    return !self.index(/^[A-Z].+[a-z]/).nil?
+    return !self.index(/^[A-Z].+[a-z]*/).nil?
   end
 
   def upcase?
